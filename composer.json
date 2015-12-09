@@ -1,0 +1,22 @@
+{
+  "name": "bCode PHP",
+  "require":
+  {
+    "smarty/smarty": "~3.1"
+  },
+  "authors":
+  [
+    {
+      "name": "Gabriel Michelini",
+      "email": "gabsaito@gmail.com"
+    }
+  ],
+  "autoload":
+  {
+    "psr-4":
+    {
+      "system\\": ["system/"],
+      "application\\": ["application/"]
+    }
+  }
+}
