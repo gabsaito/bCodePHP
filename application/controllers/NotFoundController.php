@@ -9,9 +9,8 @@ namespace application\controllers
     {
         public function indexAction()
         {
-            $this->view->setLayout('notFound');
-            $this->view->setTitle('Erro 404: Página não encontrada');
-            $this->view->show();
+            $this->view->setTitle('Página indisponível');
+            $this->view->show('notfound');
         }
     }
 }

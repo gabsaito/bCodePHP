@@ -6,12 +6,10 @@ namespace application\controllers
 
     class HomeController extends Controller
     {
-        public function novoAction()
+        public function indexAction()
         {
-            $this->view->setLayout('novoUsuario');
-            $this->view->setTitle();
-            $this->view->prepare('data', date('d/m/Y'));
-            $this->view->show();
+            $this->view->setTitle('Bem vindo');
+            $this->view->show('welcome');
         }
     }
 }
