@@ -61,31 +61,23 @@ namespace system\http
                 {
                     $this->controller = ucfirst($slicedURI[1]) . 'Controller';
                     $this->action     = 'indexAction';
-
-                    return $this;
                 }
                 else if(count($slicedURI) == 3)
                 {
                     $this->controller = ucfirst($slicedURI[1]) . 'Controller';
                     $this->action     = $slicedURI[2] . 'Action';
-
-                    return $this;
                 }
                 else if(count($slicedURI) == 4)
                 {
                     $this->controller = ucfirst($slicedURI[1]) . 'Controller';
                     $this->action     = $slicedURI[2] . 'Action';
                     $this->param      = (int)$slicedURI[3];
-
-                    return $this;
                 }
             }
             else
             {
                 $this->controller = 'HomeController';;
                 $this->action     = 'indexAction';
-
-                return $this;
             }
         }
     }
