@@ -5,80 +5,114 @@ namespace system
     class View
     {
         /**
-         * @var string $pageTitle
+         * @var object $Smarty
          */
-        private $pageTitle;
+        public $smarty;
 
         /**
-         * contém o layout da view requisitada
-         * @var string $layout
+         * @var string $title
          */
-        private $layout;
+        private $title;
 
         /**
-         * contém a instância da classe Smarty
-         * @var object $smarty
+         * @var string $header
          */
-        private static $smarty;
+        private $header;
+
+        /**
+         * @var string $footer
+         */
+        private $footer;
 
         /**
          * Metódo construtor
-         * Instância a classe smarty(classe terceira(externa))
          */
         public function __construct()
         {
-            self::$smarty = new \Smarty();
-            self::$smarty->template_dir = VIEWS_PATH;
-            self::$smarty->compile_dir = VC_PATH;
+            $this->title  = NAME;
+            $this->header = 'header';
+            $this->footer = 'footer';
+
+            // instância a classe Smarty
+            $this->smarty = new \Smarty();
+            $this->smarty->template_dir = VIEWS_PATH;
+            $this->smarty->compile_dir  = VC_PATH;
         }
 
         /**
-         * @param string $layout
-         * Metódo que atribui o nome do arquivo da view requisitada
-         */
-        public function setLayout($layout)
-        {
-            $this->layout = $layout . EXT_VIEWS;
-        }
-
-        /**
-         * Recebe e atribui titulo da página
          * @param string $title
          */
-        public function setTitle($title = null)
+        public function setTitle(string $title)
         {
-            $this->pageTitle = $title;
+            $this->title = $title;
         }
 
-        private function assignTitle()
+        /**
+         * @param string $header
+         */
+        public function setHeader(string $header)
         {
-            $pageTitle = NAME;
+            $this->header = $header;
+        }
 
-            if(!is_null($this->pageTitle))
+        /**
+         * @param string $footer
+         */
+        public function setFooter(string $footer)
+        {
+            $this->footer = $footer;
+        }
+
+        /**
+         * @param string $var
+         * @param mixed $value
+         * @return $this
+         */
+        public function setVar(string $var, mixed $value)
+        {
+            $this->smarty->assign($var, $value);
+            return $this;
+        }
+
+        /**
+         * @param array $vars
+         * atribui os valores da varieaveis da view a partir de um array relacional
+         */
+        public function setVars(array $vars)
+        {
+            if(count($vars) > 0)
             {
-                $pageTitle = $this->pageTitle . ' - ' . NAME;
+                foreach($vars as $key => $value)
+                {
+                    $this->smarty->assign($key, $value);
+                }
             }
-
-            $this->prepare('pageTitle', $pageTitle);
         }
 
         /**
-         * @param string $variable
-         * @param mixed $content
-         * Metódo de acesso para smarty->assign
+         * @param string $template
+         * Realiza a rederização da view
          */
-        public function prepare($var, $value)
+        public function show($template = '')
         {
-            self::$smarty->assign($var, $value);
-        }
+            if(!file_exists(VIEWS_PATH . $this->header . EXT_VIEWS))
+            {
+                exit('Atenção! O arquivo header especificado não foi encontrado.');
+            }
+            $this->smarty->assign('pageTitle', $this->title);
+            $this->smarty->display($this->header . EXT_VIEWS);
 
-        /**
-         * Metódo responsavel por mostrar a view
-         */
-        public function show()
-        {
-            $this->assignTitle();
-            self::$smarty->display($this->layout);
+            if((empty($template)) or (!file_exists(VIEWS_PATH . $template . EXT_VIEWS)))
+            {
+                exit('Atenção! O arquivo templante especificado não foi encontrado.');
+            }
+            $this->smarty->display($template . EXT_VIEWS);
+
+            if(!file_exists(VIEWS_PATH . $this->footer . EXT_VIEWS))
+            {
+                exit('Atenção! O arquivo footer especificado não foi encontrado.');
+            }
+            $this->smarty->display($this->footer . EXT_VIEWS);
         }
     }
 }
