@@ -6,8 +6,14 @@ namespace system\http
 
     class Request
     {
+        /**
+         * @var object $validation
+         */
         public $validation;
 
+        /**
+         * Metódo construtor
+         */
         public function __construct()
         {
             $this->validation = new Validation();
