@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: "Segoe";
+    src: url("../fonts/segoeuisl.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+    color: inherit;
+    text-decoration: inherit;
+}
+
+body {
+    background: #2C3e50;
+    font: small "Segoe", Arial, sans-serif;
+}
+
+.wrapper {
+    position: relative;
+    width: 500px;
+    margin: 0 auto;
+}
+
+header {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+section {
+    padding-bottom: 30px;
+}
+
+section article {
+    width: 100%;
+    padding: 20px;
+    border-left: 3px solid #d35400;
+    background: #ecf0f1;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+section article h1 {
+    font-weight: bold;
+    font-size: 1.7em;
+    margin-bottom: 15px;
+}
+
+section article h1.sucesso {
+    color: #16a085;
+}
+
+section article h1.erro {
+    color: #e74c3c;
+}
+
+section article p {
+    font-size: 1.4em;
+}
+
+section article p span {
+    color: #d25300;
+}
+
+footer p {
+    text-align: center;
+    color: #ffffff;
+}
