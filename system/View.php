@@ -42,15 +42,15 @@ namespace system
         /**
          * @param string $title
          */
-        public function setTitle(string $title)
+        public function setTitle($title)
         {
-            $this->title = $title;
+            $this->title = $title . ' - ' . $this->title;
         }
 
         /**
          * @param string $header
          */
-        public function setHeader(string $header)
+        public function setHeader($header)
         {
             $this->header = $header;
         }
@@ -58,7 +58,7 @@ namespace system
         /**
          * @param string $footer
          */
-        public function setFooter(string $footer)
+        public function setFooter($footer)
         {
             $this->footer = $footer;
         }
@@ -68,7 +68,7 @@ namespace system
          * @param mixed $value
          * @return $this
          */
-        public function setVar(string $var, mixed $value)
+        public function setVar($var, $value)
         {
             $this->smarty->assign($var, $value);
             return $this;
