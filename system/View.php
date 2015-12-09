@@ -95,6 +95,10 @@ namespace system
          */
         public function show($template = '')
         {
+            $this->smarty->assign('css', CSS_PATH);
+            $this->smarty->assign('js', JS_PATH);
+            $this->smarty->assign('imgs', IMGS_PATH);
+
             if(!file_exists(VIEWS_PATH . $this->header . EXT_VIEWS))
             {
                 exit('Atenção! O arquivo header especificado não foi encontrado.');
