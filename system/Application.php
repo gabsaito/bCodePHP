@@ -17,7 +17,7 @@ namespace system
          */
         public function __construct()
         {
-            $this->response = new http\Response();
+            $this->response = new Response();
         }
 
         /**
