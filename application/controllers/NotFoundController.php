@@ -5,7 +5,7 @@ namespace application\controllers
 
     use system\Controller as Controller;
 
-    class NotFoundController extends Controller
+    class NotfoundController extends Controller
     {
         public function indexAction()
         {
