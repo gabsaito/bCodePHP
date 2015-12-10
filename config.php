@@ -12,7 +12,7 @@
      */
     $config->db_driver = 'mysql'; // driver de conexão com banco de dados
     $config->db_host   = 'localhost'; // endereço do servidor do banco de dados
-    $config->db_name   = 'testeDB'; // nome do banco de dados
+    $config->db_name   = 'testedb'; // nome do banco de dados
     $config->db_user   = 'root'; // usuário do banco de dados
     $config->db_pass   = ''; // senha do banco de dados
 
