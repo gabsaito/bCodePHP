@@ -2,6 +2,9 @@
 
 namespace system
 {
+
+    use system\http\Response;
+
     class Application
     {
         /**
@@ -31,7 +34,7 @@ namespace system
 
             if(!file_exists($controllerPath))
             {
-                header('Location:' . URL_BASE . 'notfound');
+                Response::redirect('notfound');
             }
 
             $namespaceController = '\\application\\controllers\\' . $controller;
@@ -43,7 +46,7 @@ namespace system
             }
             else if(!method_exists($objController, $action))
             {
-                header('Location:' . URL_BASE . strtolower(str_replace('Controller', '', $controller)));
+                Response::redirect($controller);
             }
 
             $objController->$action($param);
