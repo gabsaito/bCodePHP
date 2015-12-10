@@ -78,5 +78,10 @@ namespace system\http
                 $this->controller = 'HomeController';
             }
         }
+
+        public static function redirect($uri)
+        {
+            header('Location:' . URL_BASE . strtolower(str_replace('Controller', '', $uri)));
+        }
     }
 }
