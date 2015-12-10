@@ -31,15 +31,19 @@ namespace system
 
             if(!file_exists($controllerPath))
             {
-                $controller = 'NotFoundController';
+                header('Location:' . URL_BASE . 'notfound');
             }
 
             $namespaceController = '\\application\\controllers\\' . $controller;
             $objController = new $namespaceController();
 
-            if(!method_exists($objController, $action))
+            if(is_null($action))
             {
                 $action = 'indexAction';
+            }
+            else if(!method_exists($objController, $action))
+            {
+                header('Location:' . URL_BASE . strtolower(str_replace('Controller', '', $controller)));
             }
 
             $objController->$action($param);
