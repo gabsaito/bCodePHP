@@ -44,6 +44,7 @@
 
     /* defines application */
     define('CONTROLLERS_PATH', APP_PATH . $config->controllers . DS);
+    define('CORES_PATH', APP_PATH . $config->cores . DS);
     define('MODELS_PATH', APP_PATH . $config->models . DS);
     define('VIEWS_PATH', APP_PATH . $config->views . DS);
 

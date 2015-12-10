@@ -22,6 +22,7 @@
     $config->application            = 'application'; // nome do diretório que contém sua aplicação
     $config->resources              = 'resources'; // nome do diretório que contém seus arquivos auxiliares(css/js/imags)
     $config->controllers            = 'controllers'; // nome do diretório que contém seus controladores
+    $config->cores                  = 'cores'; // nome do diretório que contém suas regras de negócios
     $config->models                 = 'models'; // nome do diretório que contém seus modelos(banco de dados/regras de negócio)
     $config->views                  = 'views'; // nome do diretório que contém seus arquivos front-end(html)
     $config->cascading_style_sheets = 'css'; // nome do diretório que contém seus arquivos de estilos(css)
