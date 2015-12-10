@@ -2,7 +2,6 @@
 
 namespace system
 {
-
     use system\http\Response;
 
     class Application
