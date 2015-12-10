@@ -29,7 +29,6 @@ namespace system\helpers
          * Faz a filtragem do request
          * @param array $request
          * @param int $inputType
-         * @param array $customFilters
          * @return array
          */
         public function filter($request, $inputType)
