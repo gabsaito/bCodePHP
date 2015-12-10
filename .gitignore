@@ -49,3 +49,4 @@ Temporary Items
 composer.lock
 /vendor/
 /.idea/
+/resources/views_c/*.php
