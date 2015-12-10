@@ -25,21 +25,6 @@ namespace system
         private $footer;
 
         /**
-         * @var string $css
-         */
-        private $css;
-
-        /**
-         * @var string $js
-         */
-        private $js;
-
-        /**
-         * @var string $imgs
-         */
-        private $imgs;
-
-        /**
          * Metódo construtor
          */
         public function __construct()
@@ -47,9 +32,6 @@ namespace system
             $this->title  = NAME;
             $this->header = 'header';
             $this->footer = 'footer';
-            $this->css    = CSS_PATH;
-            $this->js     = JS_PATH;
-            $this->imgs   = IMGS_PATH;
 
             // instância a classe Smarty
             $this->smarty = new \Smarty();
@@ -113,9 +95,9 @@ namespace system
          */
         public function show($template = '')
         {
-            $this->smarty->assign('css', str_replace(DS, '/', URL_BASE . $this->css));
-            $this->smarty->assign('js', str_replace(DS, '/',  URL_BASE . $this->js));
-            $this->smarty->assign('imgs', str_replace(DS, '/',  URL_BASE . $this->imgs));
+            $this->smarty->assign('css', str_replace(DS, '/', URL_BASE . CSS_PATH));
+            $this->smarty->assign('js', str_replace(DS, '/',  URL_BASE . JS_PATH));
+            $this->smarty->assign('imgs', str_replace(DS, '/',  URL_BASE . IMGS_PATH));
 
             if(!file_exists(VIEWS_PATH . $this->header . EXT_VIEWS))
             {
