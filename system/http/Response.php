@@ -60,7 +60,6 @@ namespace system\http
                 if(count($slicedURI) == 2)
                 {
                     $this->controller = ucfirst($slicedURI[1]) . 'Controller';
-                    $this->action     = 'indexAction';
                 }
                 else if(count($slicedURI) == 3)
                 {
@@ -76,8 +75,7 @@ namespace system\http
             }
             else
             {
-                $this->controller = 'HomeController';;
-                $this->action     = 'indexAction';
+                $this->controller = 'HomeController';
             }
         }
     }
