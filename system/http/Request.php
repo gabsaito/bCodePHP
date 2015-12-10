@@ -25,7 +25,7 @@ namespace system\http
          */
         public function post($name = null)
         {
-            $post = $this->validation->filter($_POST, INPUT_POST);
+            $post = (object)$this->validation->filter($_POST, INPUT_POST);
 
             if(is_null($name))
             {
