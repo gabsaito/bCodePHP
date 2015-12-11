@@ -76,5 +76,6 @@
     /**
      * Inicia o programa
      */
-    $application = new \system\core\Application();
-    $application->start();
+    $bCode = new \system\core\BCodePHP();
+    $bCode->start();
+
