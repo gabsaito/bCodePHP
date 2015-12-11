@@ -1,6 +1,6 @@
 <?php
 
-namespace system\http
+namespace system\core
 {
     use system\helpers\Validation;
 
