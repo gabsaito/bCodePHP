@@ -2,8 +2,7 @@
 
 namespace application\controllers
 {
-
-    use system\Controller as Controller;
+    use system\core\Controller;
 
     class NotfoundController extends Controller
     {

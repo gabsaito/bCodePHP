@@ -76,5 +76,5 @@
     /**
      * Inicia o programa
      */
-    $application = new \system\Application();
+    $application = new \system\core\Application();
     $application->start();
