@@ -1,6 +1,6 @@
 <?php
 
-namespace system
+namespace system\core
 {
     use system\database\Connection;
 
