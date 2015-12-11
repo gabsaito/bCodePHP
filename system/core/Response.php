@@ -5,83 +5,23 @@ namespace system\core
     class Response
     {
         /**
-         * @var string $controller
+         * @param string $uri
+         * Redireciona para uma url interna (Ex.: controlador/action/param1/param2/paramN)
          */
-        private $controller;
-
-        /**
-         * @var string $action
-         */
-        private $action;
-
-        /**
-         * @var int $param
-         */
-        private $param;
-
-        /**
-         * Construtor da classe
-         */
-        public function __construct()
+        public static function redirectIn($uri = '')
         {
-            $this->separeteURI();
+            header('Location:' . URL_BASE . $uri);
+            exit;
         }
 
         /**
-         * Metódo mágico __get
-         * @param string $name
-         * @return string | array
+         * @param string $url
+         * Redireciona para uma url externa (Ex.: http://www.google.com.br/)
          */
-        public function __get($name)
+        public static function redirectOut($url)
         {
-            return $this->$name;
-        }
-
-        /**
-         * Metódo que separa URI e defini uma rota
-         * @return object $this
-         */
-        private function separeteURI()
-        {
-            $baseURI       = $_SERVER['REQUEST_URI'];
-            $slicedURI     = explode('/', $baseURI);
-            $slicedURI     = array_filter($slicedURI);
-            $slicedURITemp = array();
-
-            foreach($slicedURI as $value)
-            {
-                $slicedURITemp[] = $value;
-            }
-
-            $slicedURI = $slicedURITemp;
-
-            if(count($slicedURI) > 1)
-            {
-                if(count($slicedURI) == 2)
-                {
-                    $this->controller = ucfirst($slicedURI[1]) . 'Controller';
-                }
-                else if(count($slicedURI) == 3)
-                {
-                    $this->controller = ucfirst($slicedURI[1]) . 'Controller';
-                    $this->action     = $slicedURI[2] . 'Action';
-                }
-                else if(count($slicedURI) == 4)
-                {
-                    $this->controller = ucfirst($slicedURI[1]) . 'Controller';
-                    $this->action     = $slicedURI[2] . 'Action';
-                    $this->param      = (int)$slicedURI[3];
-                }
-            }
-            else
-            {
-                $this->controller = 'HomeController';
-            }
-        }
-
-        public static function redirect($uri)
-        {
-            header('Location:' . URL_BASE . strtolower(str_replace('Controller', '', $uri)));
+            header('Location:' . $url);
+            exit;
         }
     }
 }
