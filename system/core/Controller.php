@@ -1,6 +1,6 @@
 <?php
 
-namespace system
+namespace system\core
 {
     class Controller
     {
@@ -20,7 +20,7 @@ namespace system
         public function __construct()
         {
             $this->view = new View();
-            $this->request = new http\Request();
+            $this->request = new Request();
         }
 
         /**

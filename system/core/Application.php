@@ -1,8 +1,8 @@
 <?php
 
-namespace system
+namespace system\core
 {
-    use system\http\Response;
+    use system\core\Response;
 
     class Application
     {
