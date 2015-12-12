@@ -24,6 +24,8 @@
      */
     define('NAME', $config->application_name);
     define('URL_BASE', $config->url_base . DS);
+    define('DEFAULT_INDEX', $config->index_page);
+    define('NOTFOUND_PAGE', $config->notfound_page);
 
     /**
      * constantes para o banco de dados
