@@ -33,11 +33,11 @@ namespace system\core
 
             if(is_null($controller))
             {
-                $controller = 'home';
+                $controller = DEFAULT_INDEX;
             }
             else if(!file_exists(CONTROLLERS_PATH . ucfirst($controller) . 'Controller.php'))
             {
-                Response::redirectIn('notfound');
+                Response::redirectIn(NOTFOUND_PAGE);
             }
 
             $instance_controller = '\\application\\controllers\\' . ucfirst($controller) . 'Controller';
@@ -49,7 +49,7 @@ namespace system\core
             }
             else if(!method_exists($class, $action . 'Action'))
             {
-                Response::redirectIn('notfound');
+                Response::redirectIn(NOTFOUND_PAGE);
             }
 
             $action = $action . 'Action';
