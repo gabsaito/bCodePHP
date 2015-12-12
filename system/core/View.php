@@ -5,27 +5,32 @@ namespace system\core
     class View
     {
         /**
-         * @var object $Smarty
+         * @var object
+         * Guarda uma instância da classe Smarty
          */
         public $smarty;
 
         /**
-         * @var string $title
+         * @var string
+         * Guarda o titulo da view solicitada
          */
         private $title;
 
         /**
-         * @var string $header
+         * @var string
+         * Guarda o header para a view solicitada
          */
         private $header;
 
         /**
-         * @var string $footer
+         * @var string
+         * Guarda o footer para a view solicitada
          */
         private $footer;
 
         /**
-         * Metódo construtor
+         * Atribui os valores de $this->title, $this->header e $this->footer
+         * Instância a classe Smarty
          */
         public function __construct()
         {

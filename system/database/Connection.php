@@ -5,7 +5,7 @@ namespace system\database
     class Connection
     {
         /**
-         * @var object $connection
+         * @var object
          * Guarda a conexão com o banco de dados
          */
         private static $connection;

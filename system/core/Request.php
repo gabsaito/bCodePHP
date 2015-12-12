@@ -7,12 +7,13 @@ namespace system\core
     class Request
     {
         /**
-         * @var object $validation
+         * @var object
+         * Guarda uma instância da classe Validation
          */
         public $validation;
 
         /**
-         * Metódo construtor
+         * Instância a classe Validation
          */
         public function __construct()
         {

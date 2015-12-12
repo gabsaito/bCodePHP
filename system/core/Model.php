@@ -7,13 +7,12 @@ namespace system\core
     class Model
     {
         /**
-         * @var object $connection
-         * Guarda a instância da classe de conexão
+         * @var object
+         * Guarda uma instância da classe Connection
          */
         public $connection;
 
         /**
-         * Metódo construtor
          * Instância a classe Connection
          */
         public function __construct()

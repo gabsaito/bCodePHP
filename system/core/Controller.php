@@ -5,17 +5,19 @@ namespace system\core
     class Controller
     {
         /**
-         * @var object $view
+         * @var object
+         * Guarda uma instância da classe View
          */
         public $view;
 
         /**
-         * @var object $request
+         * @var object
+         * Guarda uma instância da classe Request
          */
         public $request;
 
         /**
-         * Metódo construtor
+         * Instância a classe View e Request
          */
         public function __construct()
         {

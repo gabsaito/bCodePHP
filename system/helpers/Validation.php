@@ -5,8 +5,8 @@ namespace system\helpers
     class Validation
     {
         /**
-         * Filtros customizados para os dados dos inputs
-         * @var array $customFilters
+         * @var array
+         * Guarda os filtros customizados para os dados dos inputs
          */
         private $customFilters = array();
 
