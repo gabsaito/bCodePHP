@@ -3,7 +3,7 @@
     /**
      * configuração do framework
      */
-    $config->application_name = 'bCode PHP Framework'; // nome da aplicação em desenvolvimento
+    $config->application_name = 'b.CodePHP Framework'; // nome da aplicação em desenvolvimento
 
     $config->url_base         = 'http://localhost/bCodePHP'; // url raíz do sistema
 
