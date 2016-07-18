@@ -62,6 +62,12 @@
     define('EXT_VIEWS', $config->view_type);
 
     /**
+     * inicia o default_charset da aplicação como iso-8859-1
+     * está linha corrige o funcionamento do utf-8 na aplicação
+     */
+    ini_set('default_charset', 'iso-8859-1');
+
+    /**
      * Verificar instalação do composer
      */
     $autoload_composer = 'vendor' . DS . 'autoload.php';
