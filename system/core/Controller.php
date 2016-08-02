@@ -6,18 +6,18 @@ namespace system\core
     {
         /**
          * @var object
-         * Guarda uma inst‚ncia da classe View
+         * Guarda uma inst√¢ncia da classe View
          */
         public $view;
 
         /**
          * @var object
-         * Guarda uma inst‚ncia da classe Request
+         * Guarda uma inst√¢ncia da classe Request
          */
         public $request;
 
         /**
-         * Inst‚ncia a classe View e Request
+         * Inst√¢ncia a classe View e Request
          */
         public function __construct()
         {
@@ -26,11 +26,11 @@ namespace system\core
         }
 
         /**
-         * metÛdo pai da action index
+         * met√≥do pai da action index
          */
         public function indexAction()
         {
-            echo 'VocÍ est· na Index';
+            echo 'Voc√™ est√° na Index';
         }
     }
 }

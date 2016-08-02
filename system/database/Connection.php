@@ -6,13 +6,13 @@ namespace system\database
     {
         /**
          * @var object
-         * Guarda a conex„o com o banco de dados
+         * Guarda a conex√£o com o banco de dados
          */
         private static $connection;
 
         /**
          * @return object PDO
-         * Caso exista retorna a conex„o com o banco, se n„o existir realiza a conex„o antes de retorna-l·
+         * Caso exista retorna a conex√£o com o banco, se n√£o existir realiza a conex√£o antes de retorna-l√°
          */
         public static function getConnection()
         {

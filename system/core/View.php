@@ -6,13 +6,13 @@ namespace system\core
     {
         /**
          * @var string
-         * contém diretório dos arquivos da View
+         * contÃ©m diretÃ³rio dos arquivos da View
          */
         private $folderViews;
 
         /**
          * @var array
-         * contém as variaveis e seus respectivos valores para serem passados para a View
+         * contÃ©m as variaveis e seus respectivos valores para serem passados para a View
          */
         private $data = array();
 
@@ -41,7 +41,7 @@ namespace system\core
             $filePath = VIEWS_PATH . $view . ".php";
             if(!file_exists($filePath))
             {
-                exit('Atenção! O arquivo ' . $view . ' especificado não foi encontrado.');
+                exit('AtenÃ§Ã£o! O arquivo ' . $view . ' especificado nÃ£o foi encontrado.');
             }
             extract($this->data);
             include_once($filePath);

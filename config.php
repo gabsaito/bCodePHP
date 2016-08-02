@@ -1,48 +1,48 @@
 <?php
 
     /**
-     * configuraÁ„o do framework
+     * configura√ß√£o do framework
      */
-    $config->application_name = 'b.CodePHP Framework'; // nome da aplicaÁ„o em desenvolvimento
+    $config->application_name = 'b.CodePHP Framework'; // nome da aplica√ß√£o em desenvolvimento
 
-    $config->url_base         = 'http://localhost/bcode'; // url raÌz do sistema
+    $config->url_base         = 'http://localhost/bcode'; // url ra√≠z do sistema
 
-    $config->error_report     = -1; // ativa ou desativa a apresentaÁ„o do erro para o usuario(true ou false)
+    $config->error_report     = -1; // ativa ou desativa a apresenta√ß√£o do erro para o usuario(true ou false)
 
-    $config->index_page       = 'home'; // nome do controlador a ser executado por padr„o
+    $config->index_page       = 'home'; // nome do controlador a ser executado por padr√£o
 
     $config->notfound_page    = 'notfound'; // nome do controlador responsavel pela pagina Not Found
 
     /**
-     * configuraÁ„o do banco de dados
+     * configura√ß√£o do banco de dados
      */
-    $config->db_driver = 'mysql'; // driver de conex„o com banco de dados
+    $config->db_driver = 'mysql'; // driver de conex√£o com banco de dados
 
-    $config->db_host   = 'localhost'; // endereÁo do servidor do banco de dados
+    $config->db_host   = 'localhost'; // endere√ßo do servidor do banco de dados
 
     $config->db_name   = 'testedb'; // nome do banco de dados
 
-    $config->db_user   = 'root'; // usu·rio do banco de dados
+    $config->db_user   = 'root'; // usu√°rio do banco de dados
 
     $config->db_pass   = ''; // senha do banco de dados
 
     /**
-     * configuraÁ„o de rota
+     * configura√ß√£o de rota
      */
-    $config->application            = 'application'; // nome do diretÛrio que contÈm sua aplicaÁ„o
+    $config->application            = 'application'; // nome do diret√≥rio que cont√©m sua aplica√ß√£o
 
-    $config->resources              = 'resources'; // nome do diretÛrio que contÈm seus arquivos auxiliares(css/js/imags)
+    $config->resources              = 'resources'; // nome do diret√≥rio que cont√©m seus arquivos auxiliares(css/js/imags)
 
-    $config->controllers            = 'controllers'; // nome do diretÛrio que contÈm seus controladores
+    $config->controllers            = 'controllers'; // nome do diret√≥rio que cont√©m seus controladores
 
-    $config->cores                  = 'cores'; // nome do diretÛrio que contÈm suas regras de negÛcios
+    $config->cores                  = 'cores'; // nome do diret√≥rio que cont√©m suas regras de neg√≥cios
 
-    $config->models                 = 'models'; // nome do diretÛrio que contÈm seus modelos(banco de dados/regras de negÛcio)
+    $config->models                 = 'models'; // nome do diret√≥rio que cont√©m seus modelos(banco de dados/regras de neg√≥cio)
 
-    $config->views                  = 'views'; // nome do diretÛrio que contÈm seus arquivos front-end(html)
+    $config->views                  = 'views'; // nome do diret√≥rio que cont√©m seus arquivos front-end(html)
 
-    $config->cascading_style_sheets = 'css'; // nome do diretÛrio que contÈm seus arquivos de estilos(css)
+    $config->cascading_style_sheets = 'css'; // nome do diret√≥rio que cont√©m seus arquivos de estilos(css)
 
-    $config->images                 = 'imgs'; // nome do diretÛrio que contÈm seus arquivos de imagens(jpg/png/gif/svg/etc)
+    $config->images                 = 'imgs'; // nome do diret√≥rio que cont√©m seus arquivos de imagens(jpg/png/gif/svg/etc)
 
-    $config->javascript             = 'js'; // nome do diretÛrio que contÈm seus arquivos de interaÁ„o din‚mica(javascript)
+    $config->javascript             = 'js'; // nome do diret√≥rio que cont√©m seus arquivos de intera√ß√£o din√¢mica(javascript)

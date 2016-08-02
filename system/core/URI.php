@@ -6,31 +6,31 @@ namespace system\core
     {
         /**
          * @var string
-         * ContÈm uri (query string)
+         * Cont√©m uri (query string)
          */
         private $uri;
 
         /**
          * @var string
-         * ContÈm o nome do controller solicitado
+         * Cont√©m o nome do controller solicitado
          */
         private $controller;
 
         /**
          * @var string
-         * ContÈm o nome da aÁ„o a ser executada
+         * Cont√©m o nome da a√ß√£o a ser executada
          */
         private $action;
 
         /**
          * @var array int
-         * ContÈm os valores dos par‚metros para a execuÁ„o da aÁ„o
+         * Cont√©m os valores dos par√¢metros para a execu√ß√£o da a√ß√£o
          */
         private $param = array();
 
         /**
          * Atribui valor para $this->uri
-         * Executa a funÁ„o $this->explodePathURI()
+         * Executa a fun√ß√£o $this->explodePathURI()
          */
         public function __construct()
         {
@@ -53,7 +53,7 @@ namespace system\core
         }
 
         /**
-         * Define o controlador e a aÁ„o a ser executada e monta um array com os par‚metros
+         * Define o controlador e a a√ß√£o a ser executada e monta um array com os par√¢metros
          */
         private function explodePathURI()
         {

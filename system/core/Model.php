@@ -8,12 +8,12 @@ namespace system\core
     {
         /**
          * @var object
-         * Guarda uma inst‚ncia da classe Connection
+         * Guarda uma inst√¢ncia da classe Connection
          */
         public $connection;
 
         /**
-         * Inst‚ncia a classe Connection
+         * Inst√¢ncia a classe Connection
          */
         public function __construct()
         {

@@ -8,12 +8,12 @@ namespace system\core
     {
         /**
          * @var object
-         * Guarda uma inst‚ncia da classe Validation
+         * Guarda uma inst√¢ncia da classe Validation
          */
         public $validation;
 
         /**
-         * Inst‚ncia a classe Validation
+         * Inst√¢ncia a classe Validation
          */
         public function __construct()
         {

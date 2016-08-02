@@ -8,8 +8,7 @@ namespace application\controllers
     {
         public function indexAction()
         {
-            $this->view->setTitle('Bem vindo');
-            $this->view->show('welcome');
+            $this->view->render('welcome');
         }
     }
 }

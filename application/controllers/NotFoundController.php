@@ -8,8 +8,7 @@ namespace application\controllers
     {
         public function indexAction()
         {
-            $this->view->setTitle('Página indisponível');
-            $this->view->show('notfound');
+            $this->view->render('notfound');
         }
     }
 }

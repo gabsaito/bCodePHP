@@ -1,12 +1,12 @@
 <?php
 
     /**
-     * inclus„o do arquivo de configuraÁ„o de constantes
+     * inclus√£o do arquivo de configura√ß√£o de constantes
      */
     $arquivoConfig = 'config.php';
     if(!file_exists($arquivoConfig))
     {
-        exit('AtenÁ„o! O arquivo "config.php" n„o foi encontrado, por favor reinstale o bCode PHP - Framework.');
+        exit('Aten√ß√£o! O arquivo "config.php" n√£o foi encontrado, por favor reinstale o bCode PHP - Framework.');
     }
 
     $config = new \stdClass();
@@ -56,16 +56,16 @@
     define('JS_PATH', RESOURCES_PATH . $config->javascript . DS);
 
     /**
-     * Verificar instalaÁ„o do composer
+     * Verificar instala√ß√£o do composer
      */
     $autoload_composer = 'vendor' . DS . 'autoload.php';
     if(!file_exists($autoload_composer))
     {
-        exit('AtenÁ„o! O composer ainda n„o foi instalado.');
+        exit('Aten√ß√£o! O composer ainda n√£o foi instalado.');
     }
 
     /**
-     * Faz a incluÁ„o do autoload composer
+     * Faz a inclus√£o do autoload composer
      */
     require_once($autoload_composer);
 

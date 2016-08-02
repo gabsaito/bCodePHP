@@ -6,12 +6,12 @@ namespace system\core
     {
         /**
          * @var object
-         * Contém uma instância da classe URI
+         * ContÃ©m uma instÃ¢ncia da classe URI
          */
         private $uri;
 
         /**
-         * Instância a classe URI
+         * InstÃ¢ncia a classe URI
          */
         public function __construct()
         {
@@ -21,9 +21,9 @@ namespace system\core
         /**
          * Recupera e atribui os valores para o controlador, action e param
          * Verifica se existe o arquivo do controlador solicidado
-         * Verifica se existe o metódo da action solicidada
+         * Verifica se existe o metÃ³do da action solicidada
          * Executa o controlador, caso exista
-         * Executa a ação e informa os parâmetros, caso a ação exista
+         * Executa a aÃ§Ã£o e informa os parÃ¢metros, caso a aÃ§Ã£o exista
          */
         public function start()
         {
