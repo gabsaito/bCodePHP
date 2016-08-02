@@ -54,18 +54,6 @@
     define('CSS_PATH', RESOURCES_PATH . $config->cascading_style_sheets . DS);
     define('IMGS_PATH', RESOURCES_PATH . $config->images . DS);
     define('JS_PATH', RESOURCES_PATH . $config->javascript . DS);
-    define('VC_PATH', RESOURCES_PATH . $config->views_compiled . DS);
-
-    /**
-     * contantes de tipos
-     */
-    define('EXT_VIEWS', $config->view_type);
-
-    /**
-     * inicia o default_charset da aplicação como iso-8859-1
-     * está linha corrige o funcionamento do utf-8 na aplicação
-     */
-    ini_set('default_charset', 'iso-8859-1');
 
     /**
      * Verificar instalação do composer

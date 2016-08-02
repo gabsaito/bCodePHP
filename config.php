@@ -46,10 +46,3 @@
     $config->images                 = 'imgs'; // nome do diretório que contém seus arquivos de imagens(jpg/png/gif/svg/etc)
 
     $config->javascript             = 'js'; // nome do diretório que contém seus arquivos de interação dinâmica(javascript)
-
-    $config->views_compiled         = 'views_c'; // nome do diretório que contém seus arquivos front-end compilados
-
-    /**
-     * configuração de tipos
-     */
-    $config->view_type = '.html'; // extenção dos arquivos views
