@@ -5,9 +5,9 @@
      */
     $config->application_name = 'b.CodePHP Framework'; // nome da aplicação em desenvolvimento
 
-    $config->url_base         = 'http://localhost/bcodephp'; // url raíz do sistema
+    $config->url_base         = 'http://localhost/bcodephp'; // url raíz do sistema (não utilize barra no final. Ex.: http://seusite.com)
 
-    $config->error_report     = -1; // ativa ou desativa a apresentação do erro para o usuario(true ou false)
+    $config->error_report     = -1; // ativa ou desativa a apresentação do erro para o usuario(0 = false / 1 = true)
 
     $config->index_page       = 'home'; // nome do controlador a ser executado por padrão
 
